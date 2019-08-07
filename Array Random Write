@@ -1,0 +1,26 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class ArrayRandomWrite {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Type how many variables do you want in the array.");
+		int arrayLength = input.nextInt();
+		System.out.println("The array is " + arrayLength + " variables long.");
+		int arlength_1 = arrayLength - 1;
+		System.out.println("1 minus array length is " + arlength_1);
+		Random rannum = new Random();
+		
+		int array1[] = new int[arrayLength];
+		
+		for (int i = 0; i <= arlength_1; i++) {
+			System.out.println(i);
+			array1[i] = 1+rannum.nextInt(100);
+		}
+		
+		for (int u = 0; u <= arlength_1; u++) {
+			System.out.println(u + array1[u]);
+		}	
+	}
+}
